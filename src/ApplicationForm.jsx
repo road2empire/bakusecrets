@@ -204,9 +204,9 @@ const ApplicationForm = ({ onClose, onSubmit }) => {
       
       setIsSubmitted(true)
       
-      // Track Facebook Pixel CompleteRegistration event for registration completed
+      // Track Facebook Pixel ApplicationSubmitted event for application submission
       if (typeof window !== 'undefined' && window.fbq) {
-        window.fbq('track', 'CompleteRegistration', {
+        window.fbq('track', 'ApplicationSubmitted', {
           value: 100,
           currency: 'AZN',
         })
