@@ -204,13 +204,11 @@ const ApplicationForm = ({ onClose, onSubmit }) => {
       
       setIsSubmitted(true)
       
-      // Track Facebook Pixel custom event for application submission
+      // Track Facebook Pixel CompleteRegistration event for registration completed
       if (typeof window !== 'undefined' && window.fbq) {
-        window.fbq('track', 'ApplicationSubmitted', {
-          content_name: 'Baku Secret Society Application',
-          content_category: 'Application',
-          value: 1,
-          currency: 'USD'
+        window.fbq('track', 'CompleteRegistration', {
+          value: 100,
+          currency: 'AZN',
         })
       }
       
