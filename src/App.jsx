@@ -158,7 +158,7 @@ function App() {
             <div className="timeline-time">7:00 PM</div>
             <div className="timeline-content">
               <h3>CURATED CONNECTIONS</h3>
-              <p>Pre-matched international professionals. Champagne welcome. Personal introductions by your host.</p>
+              <p>Pre-matched international community. Champagne welcome. Personal introductions by your host.</p>
             </div>
           </div>
           <div className="timeline-item">

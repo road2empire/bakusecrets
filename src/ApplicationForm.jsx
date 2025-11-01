@@ -458,7 +458,7 @@ const ApplicationForm = ({ onClose, onSubmit }) => {
               placeholder="Enter your nationality" 
             />
             <p className="field-description">
-              This evening is designed for international professionals based in Baku. Your nationality helps us ensure a diverse, global mix of like-minded individuals.
+              This evening is designed for international community based in Baku. Your nationality helps us ensure a diverse, global mix of like-minded individuals.
             </p>
             {errors.nationality && <div className="error-message show">{errors.nationality}</div>}
             <div className="button-group">
@@ -570,7 +570,7 @@ const ApplicationForm = ({ onClose, onSubmit }) => {
             <label className="question-label">WHAT INTERESTS YOU ABOUT THIS EVENING?</label>
             <div className="checkbox-group">
               {[
-                'Meeting international professionals',
+                'Meeting international community',
                 'Experiencing Baku\'s premium scene',
                 'Expanding my network',
                 'Exclusive cultural experience'
