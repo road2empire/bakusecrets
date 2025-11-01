@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import './App.css'
 import ApplicationForm from './ApplicationForm'
 import { MapPin, MessageCircle, Clock } from 'lucide-react'
+import { Analytics } from '@vercel/analytics/react'
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -230,6 +231,7 @@ function App() {
           </div>
         </div>
       )}
+      <Analytics />
     </div>
   )
 }
