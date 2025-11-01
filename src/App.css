@@ -596,6 +596,21 @@ body {
         padding-left: 20px;
     }
 
+    /* Full page modal on mobile */
+    .modal {
+        align-items: flex-start;
+        padding: 0;
+    }
+    
+    .modal-content {
+        max-width: 100%;
+        max-height: 100vh;
+        height: 100vh;
+        margin: 0;
+        border-radius: 0;
+        overflow-y: auto;
+    }
+    
     .modal-content iframe#modalFrame {
         height: 80vh;
     }
