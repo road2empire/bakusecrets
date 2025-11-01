@@ -314,13 +314,12 @@ const ApplicationForm = ({ onClose, onSubmit, isNoFeeVariant = false }) => {
                   </div>
                 )}
                   
-                  <p className="quality-filter">
-                    {isNoFeeVariant 
-                      ? "We seek serious individuals who value premium experiences and meaningful connections."
-                      : "If this investment feels excessive, this evening may not align with your expectations. We seek serious individuals who value premium experiences and meaningful connections."
-                    }
-                  </p>
-                </div>
+                <p className="quality-filter">
+                  {isNoFeeVariant 
+                    ? "We seek serious individuals who value premium experiences and meaningful connections."
+                    : "If this investment feels excessive, this evening may not align with your expectations. We seek serious individuals who value premium experiences and meaningful connections."
+                  }
+                </p>
               </div>
             </div>
             
