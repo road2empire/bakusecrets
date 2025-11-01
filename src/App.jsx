@@ -10,6 +10,9 @@ function App() {
   const [currentPhase, setCurrentPhase] = useState(0)
   const [shouldLoadVideo, setShouldLoadVideo] = useState(false)
   const heroSectionRef = useRef(null)
+  
+  // Check if this is the nofee variant for split testing
+  const isNoFeeVariant = window.location.pathname.includes('/nofee')
 
   // Handle scroll for sticky CTA
   useEffect(() => {
@@ -211,7 +214,10 @@ function App() {
       {/* Final CTA */}
       <section className="final-cta" id="apply">
         <button onClick={handleCTAClick} className="cta-button">Submit Application</button>
-        <p className="disclaimer">Applications reviewed individually. Selected guests contacted within 48 hours.<br />100 AZN per ticket upon approval.</p>
+        <p className="disclaimer">
+          Applications reviewed individually. Selected guests contacted within 48 hours.
+          {!isNoFeeVariant && <><br />100 AZN per ticket upon approval.</>}
+        </p>
       </section>
 
       {/* Sticky CTA */}
@@ -227,6 +233,7 @@ function App() {
             <ApplicationForm 
               onClose={handleCloseModal}
               onSubmit={handleFormSubmit}
+              isNoFeeVariant={isNoFeeVariant}
             />
           </div>
         </div>

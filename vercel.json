@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    {
+      "source": "/nofee",
+      "destination": "/index.html"
+    }
+  ]
+}
+

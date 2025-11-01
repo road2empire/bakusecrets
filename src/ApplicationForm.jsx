@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { ArrowLeft } from 'lucide-react'
 import './ApplicationForm.css'
 
-const ApplicationForm = ({ onClose, onSubmit }) => {
+const ApplicationForm = ({ onClose, onSubmit, isNoFeeVariant = false }) => {
   const [currentStep, setCurrentStep] = useState(0)
   const [formData, setFormData] = useState({
     fullName: '',
@@ -282,38 +282,43 @@ const ApplicationForm = ({ onClose, onSubmit }) => {
               
               <div className="intro-message">
                 
-                <div className="price-notice">
-                  <div className="price-highlight">
-                    <div className="price-conditions">
-                      <span className="condition-line">You pay only if selected</span>
-                      <span className="condition-line">All-inclusive evening</span>
-                    </div>
-                    <div className="price-amount-section">
-                      <span className="price-amount">100 AZN</span>
-                      <span className="price-text">per plate</span>
-                    </div>
-                  </div>
-                  
-                  <div className="price-details">
-                    <div className="price-includes">
-                      <h4>Your investment includes:</h4>
-                      <ul>
-                        <li>Premium venue & atmosphere</li>
-                        <li>Artisan cuisine & craft cocktails</li>
-                        <li>Curated entertainment</li>
-                        <li>Meeting with like-minded internationals</li>
-                      </ul>
+                {!isNoFeeVariant && (
+                  <div className="price-notice">
+                    <div className="price-highlight">
+                      <div className="price-conditions">
+                        <span className="condition-line">You pay only if selected</span>
+                        <span className="condition-line">All-inclusive evening</span>
+                      </div>
+                      <div className="price-amount-section">
+                        <span className="price-amount">100 AZN</span>
+                        <span className="price-text">per plate</span>
+                      </div>
                     </div>
                     
-                    <div className="priceless-value">
-                      <span className="priceless-text">The connections you'll make?</span>
-                      <span className="priceless-emphasis">Priceless.</span>
+                    <div className="price-details">
+                      <div className="price-includes">
+                        <h4>Your investment includes:</h4>
+                        <ul>
+                          <li>Premium venue & atmosphere</li>
+                          <li>Artisan cuisine & craft cocktails</li>
+                          <li>Curated entertainment</li>
+                          <li>Meeting with like-minded internationals</li>
+                        </ul>
+                      </div>
+                      
+                      <div className="priceless-value">
+                        <span className="priceless-text">The connections you'll make?</span>
+                        <span className="priceless-emphasis">Priceless.</span>
+                      </div>
                     </div>
                   </div>
+                )}
                   
                   <p className="quality-filter">
-                    If this investment feels excessive, this evening may not align with your expectations. 
-                    We seek serious individuals who value premium experiences and meaningful connections.
+                    {isNoFeeVariant 
+                      ? "We seek serious individuals who value premium experiences and meaningful connections."
+                      : "If this investment feels excessive, this evening may not align with your expectations. We seek serious individuals who value premium experiences and meaningful connections."
+                    }
                   </p>
                 </div>
               </div>
